@@ -1,0 +1,113 @@
+
+<!DOCtype html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<!-- Styles -->
+<link href="styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+		<table border="0" cellpadding="0" align="center" cellspacing="0" class="backgroundTable" style="width: 100%; margin-top:50px;">
+				<tbody>
+					<tr data-block-panel="panel">
+						<td align="center">
+							
+							<!-- Container -->
+							<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" style="width: 260px;">
+								<tbody>
+									<tr>
+										<td valign="top">
+											
+											<form name="Calc">
+												
+												<!-- Input -->
+												<div class="calculator-top ">		
+													<input class="input" type="text"   name="Input" Size="16">
+													<div id="result">0</div>
+												
+												</div>		
+												
+												<!-- Row 1 -->	
+												<div class="calculator-body-1">
+													<input type="button" id="clear" name="clear" value="  AC  " OnClick="">
+													<input type="button" id="save" name="save" value="  SAVE  ">	
+													<input id="div" type="button" name="div"   value="  /  " OnClick="Calc.Input.value += ' / '">	
+												</div>	
+
+												<!-- Row 2 -->		
+												<div class="calculator-body-2">
+													
+													<input type="button" name="" value="  " >
+													<input type="button" name="zero"  value="  0  " OnClick="Calc.Input.value += '0'">
+													<input type="button" >
+													<input id="multi" type="button" name="times" value="  x  " OnClick="Calc.Input.value += ' * '">
+												</div>
+
+
+												<!-- Row 3 -->	
+												<div class="calculator-body-3">			
+													<input type="button" name="one"   value="  1  " OnClick="Calc.Input.value += '1'">
+													<input type="button" name="two"   value="  2  " OnCLick="Calc.Input.value += '2'">
+													<input type="button" name="three" value="  3  " OnClick="Calc.Input.value += '3'">
+													<input id="minus" type="button" name="minus" value="  -  " OnClick="Calc.Input.value += ' - '">
+												</div>						
+
+												<!-- Row 4 -->		
+												<div class="calculator-body-4">	
+													<input type="button" name="four"  value="  4  " OnClick="Calc.Input.value += '4'">
+													<input type="button" name="five"  value="  5  " OnCLick="Calc.Input.value += '5'">
+													<input type="button" name="six"   value="  6  " OnClick="Calc.Input.value += '6'">
+													<input id="plus" type="button" name="plus"  value="  +  " OnClick="Calc.Input.value += ' + '">
+												</div>		
+													
+												<!-- Row 5 -->		
+												<div class="calculator-body-5">	
+													<input type="button" name="seven" value="  7  " OnClick="Calc.Input.value += '7'">
+													<input type="button" name="eight" value="  8  " OnCLick="Calc.Input.value += '8'">
+													<input type="button" name="nine"  value="  9  " OnClick="Calc.Input.value += '9'">
+													<input id="equal" onclick="myFunction()" type="button" value=" = ">
+												</div>		
+											</form>
+										</td>
+									</tr>
+									<tr>
+										<td>		
+											<br><a target="_blank" style="text-decoration:none; color:#727c7e; font-size:14px" href="http://www.richard-creativity.co.uk">By Bruno Ricciardone <br><strong>Front-end Developer</strong></>	
+										</td>		
+									</tr>	
+								</tbody>
+							</table>
+							<!-- End Container -->
+							
+						</td>
+					</tr>
+				</tbody>
+			</table>
+<script>
+function myFunction() {
+    var x = eval(Calc.Input.value);
+    
+    document.getElementById("result").innerHTML = x;
+}
+
+document.getElementById("clear").onclick = function() {  
+	var x = 0;
+   	document.getElementById("result").innerHTML = x; 
+   	Calc.Input.value = ''
+
+   }
+
+
+</script>
+
+
+
+
+</body>
+</html>
+
